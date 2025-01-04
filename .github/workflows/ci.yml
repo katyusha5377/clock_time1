@@ -33,4 +33,4 @@ jobs:
         fi
 
     - name: Run tests
-      run: python -m unittest discover tests      
+      run: python -m unittest discover tests
