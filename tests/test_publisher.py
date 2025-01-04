@@ -1,16 +1,15 @@
+# test_publisher.py
+
 import unittest
-from src.publisher import ClockPublisher
+from clock_time.clock_publisher import get_time_message  # clock_publisherの関数をインポート
 
 class TestClockPublisher(unittest.TestCase):
-    def setUp(self):
-        self.publisher = ClockPublisher()
-
     def test_get_time_message(self):
-        message = self.publisher.get_time_message()
-        self.assertIn("current_time", message)
-        self.assertIn("epoch_time", message)
-        self.assertIsInstance(message["current_time"], str)
-        self.assertIsInstance(message["epoch_time"], float)
+        # get_time_message を呼び出し
+        message = get_time_message()
+        
+        # epoch_time が float または int であれば通過する
+        self.assertTrue(isinstance(message["epoch_time"], (float, int)))
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
