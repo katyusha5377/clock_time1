@@ -3,7 +3,7 @@
 import time
 
 def get_time_message():
-    # 現在のエポックタイム（秒単位）を取得して、必ずfloat型にする
+    # 現在のエポックタイム（秒単位）を取得して、必ずfloat型に変換
     epoch_time = float(time.time())
     
     # メッセージを返す
