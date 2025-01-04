@@ -1,1 +1,4 @@
-# No dependencies required for this project
+echo "# No external dependencies required" > requirements.txt
+git add requirements.txt
+git commit -m "Fix: Add empty requirements.txt"
+git push
