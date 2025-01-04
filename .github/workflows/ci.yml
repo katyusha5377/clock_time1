@@ -34,3 +34,7 @@ jobs:
 
     - name: Run tests
       run: python -m unittest discover tests
+
+    # キャッシュのクリア
+    - name: Clear cache
+      run: rm -rf ~/.cache/pip
